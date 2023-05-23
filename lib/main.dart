@@ -12,6 +12,7 @@ void main() {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
+              Text("ini halaman pertama"),
               const TextField(
                 decoration: InputDecoration(labelText: "Username"),
               ),
@@ -22,7 +23,14 @@ void main() {
               const SizedBox(
                 height: 10.0,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text("Login"))
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text("Login"),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text("Pindah halaman 2"),
+              ),
             ],
           ),
         ),
