@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'pages/profile_page.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: MyApp(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,21 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Navigation"),
-      ),
-      body: Column(
-        children: [
-          const Text("Ini Halaman Pertama"),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Home()));
-              },
-              child: const Text("Pindah Halaman 2")),
-        ],
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ProfilePage(),
     );
   }
 }
